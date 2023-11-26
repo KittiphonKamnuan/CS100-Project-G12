@@ -1,0 +1,25 @@
+.VDO{
+    background-color: tomato;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+.activity{
+    background-color: aqua;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.form{
+    background-color: rgb(255, 234, 0);
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+
+}
