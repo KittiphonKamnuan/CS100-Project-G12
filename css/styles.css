@@ -1,25 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  .profile {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  .profile-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.profile {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.profile-image {
+  max-width: 100%; 
+  height: auto; 
+}
+
+#profile1 .profile-image {
+  max-width: 200px; 
+}
+
+#profile2 .profile-image {
+  max-width: 200px; 
+}
+
+#profile3 .profile-image {
+  max-width: 200px; /* กำหนดขนาดรูปภาพสำหรับโปรไฟล์ที่ 3 */
+}
+
