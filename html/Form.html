@@ -4,112 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML FORM</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        form {
-            background-color: #fff;
-            border-radius: 10px;
-            width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        input[type="number"],
-        input[type="file"],
-        textarea,
-        select {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #555;
-        }
-
-        #responseMessage {
-            color: green;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        #errorMessage {
-            color: red;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+    <title>CSTU Passport</title>
+    <link rel="stylesheet" href="../css/Form.css">
 </head>
 
 <body>
 
     <h1>CSTU Passport</h1>
 
-    <form id="registrationForm" method="post" enctype="multipart/form-data" action="*" target="_blank" onsubmit="return validateForm()">
-        <label for="name_english">Firstname and Lastname:</label>
-        <input type="text" id="name_english" name="name_english" required>
-        <small>Only enter your first name and last name, middle name is not necessary.</small>
-        <br>
-        <br>
-       
+    <form id="registrationForm" method="post" enctype="multipart/form-data" action="#" onsubmit="return validateForm()">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
 
-        <label for="student_id_thai">Student ID:</label>
-        <input type="text" id="student_id_thai" name="student_id_thai" required>
-        <small>Please enter your 10-digit student ID.</small>
-        <br>
-        <br>
-        
-        <label for="email">University Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="name_english">Firstname and Lastname:</label>
+            <input type="text" id="name_english" name="name_english" required>
+            <small>Only enter your first name and last name, middle name is not necessary.</small>
 
-        <label for="workTitle">Work/Activity Title</label>
+            <label for="student_id_thai">Student ID:</label>
+            <input type="text" id="student_id_thai" name="student_id_thai" required>
+            <small>Please enter your 10-digit student ID.</small>
+
+            <label for="email">University Email:</label>
+            <input type="email" id="email" name="email" required>
+            <small>Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.</small>
+        </fieldset>
+
+        <!-- Other Information -->
+        <label for="workTitle">Work/Activity Title:</label>
         <input type="text" id="workTitle" name="workTitle">
 
-        <label for="activityType">Type of Work/Activity</label>
+        <label for="activityType">Type of Work/Activity:</label>
         <select id="activityType" name="activityType">
             <option value="" disabled="" selected="">Select an option</option>
-          <option value="1">Course</option>
-          <option value="2">Activity</option>
-          <option value="3">Work</option>
-          <option value="4">Research</option>
-          <option value="5">Sports</option>
-          <option value="6">Competition</option>
-          <option value="7">Computer Science</option>
+            <option value="1">Course</option>
+            <option value="2">Activity</option>
+            <option value="3">Work</option>
+            <option value="4">Research</option>
+            <option value="5">Sports</option>
+            <option value="6">Competition</option>
+            <option value="7">Computer Science</option>
         </select>
 
-
-        <label for="academicYear">Academic Year</label>
+        <label for="academicYear">Academic Year:</label>
         <select id="academicYear" name="academicYear">
             <option value="" disabled="" selected="">Select an option</option>
             <option value="2561">2561</option>
@@ -121,36 +58,27 @@
             <option value="2567">2567</option>
             <option value="2568">2568</option>
             <option value="2569">2569</option>
-          </select>
-
-
-
-
-
-        <div class="form-group">
-        <label for="semester">Semester</label>
-        <select id="semester" name="semester">
-          <option value="" disabled="" selected="">Select an option</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="Summer">Summer</option>
         </select>
-        </div>
 
-        <label for="Start Date/Time">Start Date/Time:</label>
-        <input type="date" id="Start Date/Time" name="Start Date/Time" required>
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester">
+            <option value="" disabled="" selected="">Select an option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="Summer">Summer</option>
+        </select>
 
-        <label for="End Date/Time">End Date/Time:</label>
-        <input type="date" id="End Date/Time" name="End Date/Time" required>
+        <label for="startDateTime">Start Date/Time:</label>
+        <input type="datetime-local" id="startDateTime" name="startDateTime" required>
 
-        <label for="location">Location</label>
+        <label for="endDateTime">End Date/Time:</label>
+        <input type="datetime-local" id="endDateTime" name="endDateTime" required>
+
+        <label for="location">Location:</label>
         <input type="text" id="location" name="location">
-        
-        <label for="image_upload">Image Upload:</label>
-        <input type="file" id="image_upload" name="image_upload" accept="image/*" required>
 
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
 
         <input type="submit" value="Submit">
     </form>
@@ -158,34 +86,14 @@
     <div id="errorMessage"></div>
     <div id="responseMessage"></div>
 
-    <script>
-        function validateForm() {
-            // Clear previous error messages
-            document.getElementById('errorMessage').innerHTML = '';
+    <!-- เพิ่ม div สำหรับแสดงผล -->
+    <div id="displayData">
+        <h2>Submitted Data</h2>
+        <ul id="submittedList"></ul>
+    </div>
+  
 
-            // Your validation logic here
-            var nameEnglish = document.getElementById('name_english').value;
-            if (!nameEnglish) {
-                displayErrorMessage('Please enter Name (English)');
-                return false;
-            }
-
-            // Add more validation logic as needed
-
-            // Simulate form submission and display a response
-            var responseMessage = document.getElementById('responseMessage');
-            responseMessage.innerHTML = 'Form submitted successfully!'; // You can replace this with the actual server response
-
-            // Prevent the actual form submission
-            return false;
-        }
-
-        function displayErrorMessage(message) {
-            var errorMessage = document.getElementById('errorMessage');
-            errorMessage.innerHTML = message;
-        }
-    </script>
-
+    <script src="../Form.js"></script>
 </body>
 
 </html>

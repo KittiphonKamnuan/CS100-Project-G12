@@ -28,7 +28,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-align: center;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;
   margin: 10px;
   box-sizing: border-box;
 }
@@ -56,10 +56,9 @@ section {
 }
 
 .character:hover .character-info {
-  max-height: 300px; /* Adjust the max-height as needed */
+  max-height: 300px;
   background-color: #444;
 }
-
 
 h2 {
   color: #66ccff;
@@ -72,4 +71,11 @@ p {
 
 .character-info p strong {
   font-weight: bold;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .character {
+    width: 100%;
+  }
 }
