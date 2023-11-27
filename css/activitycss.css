@@ -1,25 +1,87 @@
-.VDO{
-    background-color: tomato;
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
+/* Add some styling to your existing styles */
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
 }
 
-.activity{
-    background-color: aqua;
-    margin: 20px;
-    padding: 10px;
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
     text-align: center;
-    border-radius: 20px;
 }
 
-.form{
-    background-color: rgb(255, 234, 0);
+h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+.menu {
+    background-color: #333;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.col-6 {
+    padding: 20px;
+}
+
+.VDO, .activity, .form {
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     border-radius: 20px;
+    color: #121212;
+}
 
+.VDO {
+    background-color: #992d22; /* Dark Red */
+    color: #fff; /* White text */
+}
+
+.activity {
+    background-color: #008080; /* Teal */
+    color: #fff; /* White text */
+}
+
+.form {
+    background-color: #c79100; /* Dark Yellow */
+    color: #fff; /* White text */
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+}
+
+.yellow-text {
+    color: #f39c12;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.author-name {
+    font-weight: bold;
 }

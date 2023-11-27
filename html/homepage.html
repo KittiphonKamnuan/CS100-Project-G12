@@ -1,93 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MY CSTU PASSPORT</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <title>CSTU Passport Webpage</title>
 </head>
 <body>
-<header>
-    <h1> CS100-Project-G12 </h1>
-</header>
+    <header>
+        <h1>CSTU Passport</h1>
+    </header>
 
-    <div class="row">
-        <div class="col-3 col-s-3 menu">
-            <nav>
-                <ul class="menu">
-                    <li><a href="">HOME PAGE</a></li>
-                    <li><a href="">MY ADVISOR</a></li>
-                    <li><a href="">MY ACTIVITIES</a></li>
-                    <li><a href="">MORE</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="col-6 col-s-9">
-          <div class="profile" id="profile1">
-            <h2>นายกิตติภณ คำนวล (หนุ่ม)</h2>
-            <!-- เพิ่มรูปภาพ -->
-            <img src="../image\KittiphonImage.jpg" alt="Kittiphon's Photo" class="profile-image">
-            <p>เลขนักศึกษา: 6609650186</p>
-            <p>ชั้นปีที่: 1</p>
-            <p>คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์</p>
-            <p>เบอร์โทร: 0636753551</p>
-            <p>อีเมล: Kittiphon.kam@dome.tu.ac.th</p>
-          </div>
-      
-          <div class="profile" id="profile2">
-            <h2>นายกิตติธัช เด่นสกุลประเสริฐ (มิว)</h2>
-            <!-- เพิ่มรูปภาพ -->
-            <img src="../image/kittithat.JPG" alt="Kittithat's Photo" class="profile-image">
-            <p>เลขนักศึกษา: 6609650079</p>
-            <p>ชั้นปีที่: 1</p>
-            <p>คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์</p>
-            <p>เบอร์โทร: 0988968584</p>
-            <p>อีเมล: Kittithat.den@dome.tu.ac.th</p>
-          </div>
-      
-          <div class="profile" id="profile3">
-            <h2>นายณัฏฐ์ ศรีสุวรรณกุล (ต้นไผ่)</h2>
-            <!-- เพิ่มรูปภาพ -->
-            <img src="../image/Natt.jpg" alt="Natt's Photo" class="profile-image">
-            <p>เลขนักศึกษา: 6609650327</p>
-            <p>ชั้นปีที่: 1</p>
-            <p>คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์</p>
-            <p>เบอร์โทร: 0863510895</p>
-            <p>อีเมล: Natt.sri@dome.tu.ac.th</p>
-          </div>
+    <header>
+        <h2>Please Select a Character</h2>
+    </header>
 
-          <a href="#" onclick="viewProfile('profile1')">Activity</a>
-
-        </div>
-
-
-        <div class="col-3 col-s-12">
-            <div class="aside">
-              
+    <section>
+        <div class="character" data-index="0">
+            <img src="../image/KittiphonImage.jpg" alt="Character 1">
+            <div class="character-info">
+                <h2>Mr. Kittiphon Kamnuan (Noom)</h2>
+                <p><strong>Student ID:</strong> 6609650186</p>
+                <p><strong>Year:</strong> 1</p>
+                <p><strong>Faculty:</strong> Science and Technology</p>
+                <p><strong>Major:</strong> Computer Science</p>
+                <p><strong>Phone:</strong> 0636753551</p>
+                <p><strong>Email:</strong> Kittiphon.kam@dome.tu.ac.th</p>
             </div>
         </div>
-    </div>
 
-    <footer class="col-12 col-s-12">
-        <div class="footer-content left-align">
-            <h1 class="yellow-text"> CS100-Project-G12 </h1>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:kittiphon.kam@dome.tu.ac.th">Kittiphon.kam@dome.tu.ac.th</a></p>
-                <p>Phone: 0636753551 (หนุ่ม)</p>
-                <br>
-                <p>Email: <a href="mailto:Kittithat.den@dome.tu.ac.th">Kittithat.den@dome.tu.ac.th</a></p>
-                <p>Phone: 0988968584 (มิว)</p>
-                <br>
-                <p>Email: <a href="mailto:natt.sri@dome.tu.ac.th">Natt.sri@dome.tu.ac.th</a></p>
-                <p>Phone: 0863510895 (ต้นไผ่)</p>
-            </div>
-            <div class="footer-text">
-                &copy; 2023 <span class="author-name">CS100-Project-G12</span>
+        <div class="character" data-index="1">
+            <img src="../image/kittithat.JPG" alt="Character 2">
+            <div class="character-info">
+                <h2>Mr. Kittithat Densakulnarong (Mew)</h2>
+                <p><strong>Student ID:</strong> 6609650079</p>
+                <p><strong>Year:</strong> 1</p>
+                <p><strong>Faculty:</strong> Science and Technology</p>
+                <p><strong>Major:</strong> Computer Science</p>
+                <p><strong>Phone:</strong> 0988968584</p>
+                <p><strong>Email:</strong> Kittithat.den@dome.tu.ac.th</p>
             </div>
         </div>
-    </footer>
 
+        <div class="character" data-index="2">
+            <img src="../image/Natt.jpg" alt="Character 3">
+            <div class="character-info">
+                <h2>Mr. Natt Srisuwankul (Tonpai)</h2>
+                <p><strong>Student ID:</strong> 6609650327</p>
+                <p><strong>Year:</strong> 1</p>
+                <p><strong>Faculty:</strong> Science and Technology</p>
+                <p><strong>Major:</strong> Computer Science</p>
+                <p><strong>Phone:</strong> 0863510895</p>
+                <p><strong>Email:</strong> Natt.sri@dome.tu.ac.th</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/homepage.js"></script>
 </body>
 </html>

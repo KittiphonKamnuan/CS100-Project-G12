@@ -1,7 +1,3 @@
-function viewProfile(profileId) {
-  console.log(`Viewing profile ${profileId}`);
-}
-
 document.getElementById('exploreBtn').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default behavior of the link
 
