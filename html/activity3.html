@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Form.css"> <!-- Reusing styles from Form.css -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #18191a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .post {
+            background-color: #292b2c;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        .post img {
+            max-width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .post .post-info {
+            padding: 10px;
+        }
+
+        .post h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .post p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        .post a {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .post a:hover {
+            text-decoration: underline;
+        }
+
+        .post-activity-link {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .post-activity-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>CSTU Passport - Activity</title>
+</head>
+
+<body>
+    <header>
+        <h2>Activity Page</h2>
+    </header>
+
+    <section>
+        <!-- Add a link or button to navigate to the form.html page -->
+        <a href="form.html" class="post-activity-link">Post New Activity</a>
+
+        <!-- Replace the following with your activity content -->
+        <div class="post" data-index="0" onclick="redirectToActivity('activity1.html')">
+            <img src="../image/activity1.jpg" alt="Activity 1">
+            <div class="post-info">
+                <h2>Activity 1</h2>
+                <p><strong>Date:</strong> January 1, 2023</p>
+                <p><strong>Location:</strong> Campus Auditorium</p>
+                <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="activity1.html">Read more</a>
+            </div>
+        </div>
+
+        <div class="post" data-index="1" onclick="redirectToActivity('activity2.html')">
+            <img src="../image/activity2.jpg" alt="Activity 2">
+            <div class="post-info">
+                <h2>Activity 2</h2>
+                <p><strong>Date:</strong> February 15, 2023</p>
+                <p><strong>Location:</strong> Sports Complex</p>
+                <p><strong>Description:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="activity2.html">Read more</a>
+            </div>
+        </div>
+        <!-- End of activity content -->
+    </section>
+
+    <script src="../javascript/activity.js"></script>
+</body>
+
+</html>
