@@ -13,8 +13,8 @@ function validateForm() {
     var location = document.getElementById('location').value;
     var description = document.getElementById('description').value;
 
-    if (!/^[A-Za-z\s]+$/.test(nameEnglish)) {
-        displayErrorMessage('Please enter a valid name containing only English letters.');
+    if (!/^[A-Za-z]+\s[A-Za-z]+$/.test(nameEnglish)) {
+        displayErrorMessage('Please enter a valid name with at least one space between first name and last name.');
         return false;
     }
 
