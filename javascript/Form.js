@@ -1,8 +1,6 @@
 function validateForm() {
-    // Clear previous error messages
     document.getElementById('errorMessage').innerHTML = '';
 
-    // Your validation logic here
     var nameEnglish = document.getElementById('name_english').value;
     var studentId = document.getElementById('student_id_thai').value;
     var email = document.getElementById('email').value;
@@ -15,8 +13,8 @@ function validateForm() {
     var location = document.getElementById('location').value;
     var description = document.getElementById('description').value;
 
-    if (!nameEnglish) {
-        displayErrorMessage('Please enter Name (English).');
+    if (!/^[A-Za-z\s]+$/.test(nameEnglish)) {
+        displayErrorMessage('Please enter a valid name containing only English letters.');
         return false;
     }
 
@@ -30,7 +28,6 @@ function validateForm() {
         return false;
     }
 
-    // Additional validations
     if (!workTitle) {
         displayErrorMessage('Please enter Work/Activity Title.');
         return false;
@@ -51,13 +48,16 @@ function validateForm() {
         return false;
     }
 
-    // Add more validations for other fields as needed
+    if (new Date(startDateTime) >= new Date(endDateTime)) {
+        displayErrorMessage('End Date/Time must be greater than Start Date/Time.');
+        return false;
+    }
 
-    // Simulate form submission and display a response
     var responseMessage = document.getElementById('responseMessage');
-    responseMessage.innerHTML = 'Form submitted successfully!'; // You can replace this with the actual server response
+    responseMessage.innerHTML = 'Form submitted successfully!'; 
 
-    // Prevent the actual form submission
+    displaySubmittedData();
+
     return false;
 }
 
@@ -66,24 +66,10 @@ function displayErrorMessage(message) {
     errorMessage.innerHTML = message;
 }
 
-function validateForm() {
-    // ... (รหัส JavaScript ของคุณ)
-
-    // เพิ่มโค้ดสำหรับแสดงผลข้อมูลที่รับมา
-    displaySubmittedData();
-
-    // ป้องกันการส่งฟอร์มจริง ๆ
-    return false;
-}
-
 function displaySubmittedData() {
-    // เข้าถึง div สำหรับแสดงผล
     var displayDiv = document.getElementById('displayData');
-
-    // เข้าถึง ul สำหรับแสดงรายการข้อมูล
     var submittedList = document.getElementById('submittedList');
 
-    // เข้าถึงค่าข้อมูลจากฟอร์ม
     var nameEnglish = document.getElementById('name_english').value;
     var studentId = document.getElementById('student_id_thai').value;
     var email = document.getElementById('email').value;
@@ -96,7 +82,6 @@ function displaySubmittedData() {
     var location = document.getElementById('location').value;
     var description = document.getElementById('description').value;
 
-    // สร้าง HTML สำหรับแสดงผล
     var listItemHTML = `
       <li><strong>Name:</strong> ${nameEnglish}</li>
       <li><strong>Student ID:</strong> ${studentId}</li>
@@ -111,9 +96,6 @@ function displaySubmittedData() {
       <li><strong>Description:</strong> ${description}</li>
     `;
 
-    // แทรก HTML ลงในรายการ
     submittedList.innerHTML = listItemHTML;
-
-    // แสดง div ที่มีข้อมูล
     displayDiv.style.display = 'block';
 }
