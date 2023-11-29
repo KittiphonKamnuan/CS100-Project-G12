@@ -81,4 +81,15 @@ input[type="submit"]:hover {
   #submittedList li {
     margin-bottom: 10px;
   }
+  .form-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
   
+ 
+  .form-group textarea {
+    resize: vertical;
+  }
