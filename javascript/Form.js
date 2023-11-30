@@ -83,19 +83,38 @@ function displaySubmittedData() {
     var description = document.getElementById('description').value;
 
     var listItemHTML = `
-      <li><strong>Name:</strong> ${nameEnglish}</li>
-      <li><strong>Student ID:</strong> ${studentId}</li>
-      <li><strong>Email:</strong> ${email}</li>
-      <li><strong>Work/Activity Title:</strong> ${workTitle}</li>
-      <li><strong>Type of Work/Activity:</strong> ${activityType}</li>
-      <li><strong>Academic Year:</strong> ${academicYear}</li>
-      <li><strong>Semester:</strong> ${semester}</li>
-      <li><strong>Start Date/Time:</strong> ${startDateTime}</li>
-      <li><strong>End Date/Time:</strong> ${endDateTime}</li>
-      <li><strong>Location:</strong> ${location}</li>
-      <li><strong>Description:</strong> ${description}</li>
+<li><strong>Name:</strong> ${nameEnglish}</li>
+<li><strong>Student ID:</strong> ${studentId}</li>
+<li><strong>Email:</strong> ${email}</li>
+<li><strong>Work/Activity Title:</strong> ${workTitle}</li>
+<li><strong>Type of Work/Activity:</strong> ${activityType}</li>
+<li><strong>Academic Year:</strong> ${academicYear}</li>
+<li><strong>Semester:</strong> ${semester}</li>
+<li><strong>Start Date/Time:</strong> ${startDateTime}</li>
+<li><strong>End Date/Time:</strong> ${endDateTime}</li>
+<li><strong>Location:</strong> ${location}</li>
+<li><strong>Description:</strong> ${description}</li>
     `;
 
     submittedList.innerHTML = listItemHTML;
     displayDiv.style.display = 'block';
 }
+
+ // JavaScript to handle the settings panel
+const settingsButton = document.getElementById('settingsButton');
+const settingsPanel = document.getElementById('settingsPanel');
+const textSizeSelect = document.getElementById('textSize');
+
+settingsButton.addEventListener('click', () => {
+settingsPanel.style.display = 'block';
+});
+
+function closeSettings() {
+settingsPanel.style.display = 'none';
+}
+
+textSizeSelect.addEventListener('change', () => {
+const selectedTextSize = textSizeSelect.value;
+document.body.style.fontSize = selectedTextSize === 'larger' ? '18px' : selectedTextSize === 'largest' ? '24px' : '16px';
+});
+

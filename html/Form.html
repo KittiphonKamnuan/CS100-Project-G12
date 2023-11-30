@@ -9,8 +9,20 @@
 </head>
 
 <body>
-
     <h1>CSTU Passport</h1>
+
+    <a href="#" id="settingsButton">Setting</a>
+    <div id="settingsPanel">
+        <h2>Settings</h2>
+        <!-- Add text size setting -->
+        <label for="textSize">Text Size:</label>
+        <select id="textSize" name="textSize">
+            <option value="normal">Normal</option>
+            <option value="larger">Larger</option>
+            <option value="largest">Largest</option>
+        </select>
+        <button onclick="closeSettings()">Close</button>
+    </div>
 
     <form id="registrationForm" method="post" enctype="multipart/form-data" action="#" onsubmit="return validateForm()">
         <fieldset>
@@ -65,14 +77,13 @@
             <option value="2">2</option>
             <option value="Summer">Summer</option>
         </select>
-        
-        <div class="form-group">
-        <label for="startDateTime">Start Date/Time:</label>
-        <input type="datetime-local" id="startDateTime" name="startDateTime" required>
 
-        <label for="endDateTime">End Date/Time:</label>
-        <input type="datetime-local" id="endDateTime" name="endDateTime" required>
-        
+        <div class="form-group">
+            <label for="startDateTime">Start Date/Time:</label>
+            <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+    
+            <label for="endDateTime">End Date/Time:</label>
+            <input type="datetime-local" id="endDateTime" name="endDateTime" required> 
         </div>
 
         <label for="location">Location:</label>
@@ -91,8 +102,7 @@
         <h2>Submitted Data</h2>
         <ul id="submittedList"></ul>
     </div>
-  
-
+    
     <script src="../javascript/Form.js"></script>
 </body>
 
