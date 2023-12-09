@@ -1,3 +1,6 @@
+const config = {
+    backendUrl: "http://localhost:8000/", 
+};
 const port = 8000;
 
 function validateForm() {

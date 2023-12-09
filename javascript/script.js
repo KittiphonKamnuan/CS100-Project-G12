@@ -1,5 +1,3 @@
-const port = 8000;
-
 document.getElementById('exploreBtn').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default behavior of the link
 

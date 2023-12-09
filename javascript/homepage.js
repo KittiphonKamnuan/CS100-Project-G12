@@ -1,5 +1,3 @@
-const port = 8000;
-
 document.addEventListener('DOMContentLoaded', function () {
   const characters = document.querySelectorAll('.character');
 
