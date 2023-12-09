@@ -17,6 +17,7 @@ function validateForm() {
     var endDateTime = document.getElementById('endDateTime').value;
     var location = document.getElementById('location').value;
     var description = document.getElementById('description').value;
+    var facultyThai = document.getElementById('faculty').value;
 
     if (!/^[A-Za-z]+\s[A-Za-z]+$/.test(nameEnglish)) {
         displayErrorMessage('Please enter a English name with at least one space between first name and last name.');
@@ -49,6 +50,11 @@ function validateForm() {
     }
 
     if (semester === "") {
+        displayErrorMessage('Please select Semester.');
+        return false;
+    }
+
+    if (facultyThai === "") {
         displayErrorMessage('Please select Semester.');
         return false;
     }
