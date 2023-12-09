@@ -1,3 +1,5 @@
+const port = 8000;
+
 function validateForm() {
     document.getElementById('errorMessage').innerHTML = '';
 
