@@ -78,6 +78,43 @@
             <option value="Summer">Summer</option>
         </select>
 
+        <label for="faculty">Faculty:</label>
+        <select id="faculty" name="faculty" required style="width: 100%;">
+            <option value="" disabled="" selected="">Select an option</option>
+            <option value="Faculty of Law">Faculty of Law</option>
+            <option value="Faculty of Commerce and Accountancy">Faculty of Commerce and Accountancy</option>
+            <option value="Faculty of Political Science">Faculty of Political Science</option>
+            <option value="Faculty of Economics">Faculty of Economics</option>
+            <option value="Faculty of Social Sciences">Faculty of Social Sciences</option>
+            <option value="Faculty of Journalism and Mass Communication">Faculty of Journalism and Mass Communication</option>
+            <option value="Faculty of Sociology and Anthropology">Faculty of Sociology and Anthropology</option>
+            <option value="Puey Ungphakorn School of Development Studies">Puey Ungphakorn School of Development Studies</option>
+            <option value="College of Innovation">College of Innovation</option>
+            <option value="College of Interdisciplinary Studies">College of Interdisciplinary Studies</option>
+            <option value="College of International Studies">College of International Studies</option>
+            <option value="Faculty of Learning Sciences and Education">Faculty of Learning Sciences and Education</option>
+            <option value="College of Public Administration">College of Public Administration</option>
+            <option value="Faculty of Arts">Faculty of Arts</option>
+            <option value="Faculty of Fine and Applied Arts">Faculty of Fine and Applied Arts</option>
+            <option value="Faculty of Science and Technology">Faculty of Science and Technology</option>
+            <option value="Faculty of Engineering">Faculty of Engineering</option>
+            <option value="Faculty of Architecture and Planning">Faculty of Architecture and Planning</option>
+            <option value="Sirindhorn International Institute of Technology">Sirindhorn International Institute of Technology</option>
+            <option value="Faculty of Medicine">Faculty of Medicine</option>
+            <option value="Faculty of Dentistry">Faculty of Dentistry</option>
+            <option value="Faculty of Allied Health Sciences">Faculty of Allied Health Sciences</option>
+            <option value="Faculty of Nursing">Faculty of Nursing</option>
+            <option value="Faculty of Public Health">Faculty of Public Health</option>
+            <option value="Faculty of Pharmaceutical Sciences">Faculty of Pharmaceutical Sciences</option>
+            <option value="International College of Medicine">International College of Medicine</option>
+            <option value="Others">Others</option>
+        </select>        
+
+        <div class="form-group">
+            <label for="imageInput">Upload Image:</label>
+            <input type="file" accept="image/*" id="imageInput" name="imageInput" onchange="handleImageChange()" />
+        </div>
+
         <div class="form-group">
             <label for="startDateTime">Start Date/Time:</label>
             <input type="datetime-local" id="startDateTime" name="startDateTime" required>

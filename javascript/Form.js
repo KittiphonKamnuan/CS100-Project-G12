@@ -19,7 +19,7 @@ function validateForm() {
     var description = document.getElementById('description').value;
 
     if (!/^[A-Za-z]+\s[A-Za-z]+$/.test(nameEnglish)) {
-        displayErrorMessage('Please enter a valid name with at least one space between first name and last name.');
+        displayErrorMessage('Please enter a English name with at least one space between first name and last name.');
         return false;
     }
 
@@ -74,7 +74,6 @@ function displayErrorMessage(message) {
 function displaySubmittedData() {
     var displayDiv = document.getElementById('displayData');
     var submittedList = document.getElementById('submittedList');
-
     var nameEnglish = document.getElementById('name_english').value;
     var studentId = document.getElementById('student_id_thai').value;
     var email = document.getElementById('email').value;
@@ -86,6 +85,7 @@ function displaySubmittedData() {
     var endDateTime = document.getElementById('endDateTime').value;
     var location = document.getElementById('location').value;
     var description = document.getElementById('description').value;
+    var facultyThai = document.getElementById('faculty').value;
 
     var listItemHTML = `
 <li><strong>Name:</strong> ${nameEnglish}</li>
@@ -95,6 +95,7 @@ function displaySubmittedData() {
 <li><strong>Type of Work/Activity:</strong> ${activityType}</li>
 <li><strong>Academic Year:</strong> ${academicYear}</li>
 <li><strong>Semester:</strong> ${semester}</li>
+<li><strong>Faculty:</strong> ${facultyThai}</li>
 <li><strong>Start Date/Time:</strong> ${startDateTime}</li>
 <li><strong>End Date/Time:</strong> ${endDateTime}</li>
 <li><strong>Location:</strong> ${location}</li>
